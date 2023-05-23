@@ -6,10 +6,10 @@ const User = require('./models/user');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "paste here your mongodb uri that can be get form connect button";
+const dbURI = "mongodb://localhost:27017";
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }) //this return promise
-  .then((result) =>{ console.log("Database-connected"); app.listen(8080)})
+  .then((result) =>{ console.log("Database-connected"); app.listen(8090)})
   //after db connected than it will listen to port3000
   .catch(err => console.log(err)); //else errors will be shown
 
